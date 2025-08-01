@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>英語クイズ</title>
+  <script src="../jquery-2.0.3.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="kuizu.css"/>
+  <script src="../jquery-ui.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="jquery-ui.min.css"/>
+  <script src="jquery.fademover.js"></script>
+  <script src="occu.js"></script>
+</head>
+</head>
+<body id="body">
+   <div class="iti">
+    <dl id="acmenu">
+      <dt>問題一覧</dt>
+       <dd><a href="kuizu2.html" id="itiran">日常英語表現</a></dd>
+       <dd><a href="occupation2.html" id="itiran">職業</a></dd>
+    </dl>
+    <dl id="acmenu2">
+     <dt>お題</dt>
+      <dd><a href="kuizu.html" id="nitijou">日常英語表現</a></dd>
+      <dd><a href="occupation.html" id="occu">職業</a></dd>
+      <dd><a href="occu_pic.html" id="occu">職業~イラスト~</a></dd>
+    </dl>
+    <dl id="acmenu3">
+     <dt>ランキング</dt>
+      <dd><a href="kuizu.php" id="nitijou">日常英語表現</a></dd>
+      <dd><a href="occupation.php" id="occu">職業</a></dd>
+      <dd><a href="occu_pic.php" id="occu">職業~イラスト~</a></dd>
+    </dl>
+  </div>
+  <div id="layerImage">
+<!--   <div class="layerTransparent">-->
+  <div class="hondai">
+    <div class="miss">
+      <p>〇<ruby>間違<rp>(</rp><rt>まちが</rt><rp>)</rp></ruby>った<ruby>問題<rp>(</rp><rt>もんだい</rt><rp>)</rp></ruby></p>
+      <div class="missno">
+        <!-- <p class="miss0"></p>
+        <p class="miss1"></p>
+        <p class="miss2"></p>
+        <p class="miss3"></p>
+        <p class="miss4"></p>
+        <p class="miss5"></p>
+        <p class="miss6"></p> -->
+      </div>
+    </div>
+    <span class="mon"><ruby>第<rp>(</rp><rt>だい</rt><rp>)</rp></ruby> <span id="monkazu"></span> <ruby>問<rp>(</rp><rt>もん</rt><rp>)</rp></ruby></span>
+    <div id="taitoru"><h1><ruby>職業<rp>(</rp><rt>しょくぎょう</rt><rp>)</rp></ruby></h1></div>
+    <div class="kuizu"></div>
+    <div class="kotae"></div>
+    <input type="button" id="onsei" value="音声開始" />
+    <div id="kotae2">
+        <input type="text" id="text" rows="1" cols="33" autocomplete="off"/>
+        <input type="button" id="sousin" value="送信"/>
+        <input type="button" id="next" value="次へ" disabled/>
+        <input type="button" id="reset" value="リセット" disabled/>
+      </div>
+
+    <div id="seikai">
+      <span><ruby>正解数<rp>(</rp><rt>せいかいすう</rt><rp>)</rp></ruby>は</span><div></div>
+      <span id="tensu">0</span>
+      <span id="kei"></span>
+    </div>
+    <div class="timer">
+  　　<span>経過時間　<span id="clock">0.00</span>　秒</span>
+  </div>
+  <div id="cong">
+    <h3>おめでとうございます！</h3>
+    <p><span>ランキング</span>に載ることができます。</p>
+    <p><span>ニックネーム</span>を書いてランキングに載ろう！</p>
+    <p>ランキングは、(時間×問題数)で判断しています。</p>
+    <p>あなたのタイムは　<span id="your_time" name="tim"></span>　秒</p>
+    <p>※リセットを押すと<span>スキップ</span>できます。</p>
+    <div>ニックネーム　<input type="text" maxlength="10" id="nik" name="nik">
+    <input type="button" id="nik_sousin" value="送信">
+    </div>
+  </div>
+    <audio id="maru2" preload="auto">
+      <source src="maru.mp3" type="audio/mp3"/>
+    </audio>
+    <audio id="batu2" preload="auto">
+      <source src="batu.mp3" type="audio/mp3"/>
+    </audio>
+
+    <div class="marubatu">
+      <img src="maru.png" id="maru" />
+      <img src="batu.png" id="batu" />
+   </div>
+
+  </div>
+<!--<div id="dialog" title="アプリの説明">
+  このアプリの<span>利用方法と注意点</span>
+  <ul>
+  <li>日本語がランダムで表示されます。その表示された日本語を英語で答えてください。</li>
+  <li>答え方は、音声入力とテキスト入力の２種類あります。</li>
+  <li>音声入力の場合は、左にある「<span>音声開始</span>」ボタンを押し、マイクを許可にして発声してください。</li>
+  <li>入力が終わったら、「<span>送信</span>」ボタンを押してください。</li>
+  <li>合っていれば「<span>〇</span>」を、間違っていれば「<span>✖</span>」を表示すると共に、答えも表示され読み上げます。</li>
+  <li>解答したら、「<span>次へ</span>」ボタンを押してください。</li>
+  <li>最大３問あり、終了すると右上に間違えた問題を表示し、読み上げます。</li>
+</ul>
+</div>-->
+</div>
+</body>
+</html>

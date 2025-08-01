@@ -1,0 +1,43 @@
+<?php
+$i=0;
+$a = $_GET['name'];
+$b = $_GET['time'];
+if(($a != "")&&($b != "")){
+$w = $a.":".$b."\n";
+}
+$file = fopen("rank.data","a");
+fwrite($file,$w);
+fclose($file);
+// $file2=fopen("rank.data","r");
+$data_info = file("rank.data");
+foreach ( $data_info as $value){
+	$pieces = explode(":",$value);
+	$time[$pieces[0]] = $pieces[1];
+}
+asort($time,SORT_NUMERIC);
+echo "<html><h1>日常英語表現Ranking</h1>";
+echo "<table border=\"1\" width=\"400px\"><tr align=\"center\"><td width=\"100px\">ランキング</td><td>ニックネーム</td><td width=\"100px\">時間</td></tr>";
+
+$pre=-1;
+$interval = 0;
+$prev=null;
+foreach ($time as $key => $value){
+	// $g=count($time);
+	// if($value[$i] == $value[$i+1]){
+	//   $i=$i-1;
+	//  }
+
+
+	if(floatval($prev) == floatval($value)) {
+		$interval++;
+	}
+	else {
+		$i++;
+		$interval = 0;
+	}
+	$prev = $value;
+	echo "<tr align=\"center\"><td>".$i."位"."</td><td>" . $key . "</td><td>" . $value . " 秒"."</td></tr>";
+	$i += $interval;
+}
+echo "</table></html>";
+?>
