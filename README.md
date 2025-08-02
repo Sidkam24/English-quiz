@@ -1,5 +1,5 @@
 # 音声合成音声認識機能付きの英会話学習支援Webアプリ
-　URL：https://rikei-labo.com/app/quiz/kuizu.html
+　URL：https://rikei-labo.com/app/quiz/kuizu.html  
 　※Google Chorome推奨（Web Speech APIのため）
 
 ## 目的・実績
